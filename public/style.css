@@ -274,8 +274,9 @@ body {
 .campo-texto2 {
   width: 100%;
   height: 38px;
-  color: #a1a1a1;
+  color: #808080;
   border: 1px solid #fafafa;
+  outline: 0;
 }
 
 .texto {
@@ -351,7 +352,7 @@ body {
   color: #262626;
 }
 
-.sugestoes1 {
+.sugestao {
   display: flex;
   justify-content: space-between;
   align-items: center;
