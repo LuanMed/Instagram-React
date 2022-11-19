@@ -5,12 +5,12 @@ import Stories from "./Stories";
 
 export default function Corpo() {
     return (
-        <div class="container">
-            <div class="mainbar">
+        <div className="container">
+            <div className="mainbar">
                 <Stories />
                 <Posts />
             </div>
-            <div class="sidebar-posicao">
+            <div className="sidebar-posicao">
                 <SideBar />
             </div>
         </div>

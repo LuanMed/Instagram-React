@@ -310,8 +310,12 @@ body {
   align-items: center;
   padding-top: 5px;
 }
+
 .perfil img {
   margin-right: 17px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
 }
 
 .perfil p {
@@ -319,8 +323,10 @@ body {
   font-size: 14px;
 }
 
-.edit-pencil{
-  color: #8e8e8e;
+.perfil ion-icon{
+  color: #707070;
+  cursor: pointer;
+  margin-left: 5px;
 }
 
 .negrito {
