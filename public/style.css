@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+* ion-icon{
+  cursor: pointer;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #e5e5e5;

@@ -9,7 +9,7 @@ export default function Posts() {
             fotoPost: <img data-test="post-image" src="./assets/img/yui1.jpeg" />,
             imagemLike: <img src="./assets/img/respondeai.png" />,
             nomeLike: 'respondeai',
-            qtdLike: 'outras 101.523 pessoas',
+            qtdLike: 101.523,
             nomeComentario: 'luanmede ',
             comentario: 'Aaah, gatíneaaa',
         },
@@ -19,7 +19,7 @@ export default function Posts() {
             fotoPost: <img data-test="post-image" src="./assets/img/yui2.jpeg" />,
             imagemLike: <img src="./assets/img/adorableanimals.png" />,
             nomeLike: 'adorable_animals',
-            qtdLike: 'outras 99.159 pessoas',
+            qtdLike: 99.159,
             nomeComentario: 'luanmede ',
             comentario: 'Awwwnt que lindxxx',
         },
@@ -29,11 +29,12 @@ export default function Posts() {
             fotoPost: <video data-test="post-image" autoPlay loop muted><source src="./assets/img/yui3-video.mp4" type="video/mp4" /></video>,
             imagemLike: <img src="./assets/img/respondeai.png" />,
             nomeLike: 'respondeai',
-            qtdLike: 'outras 575.418 pessoas',
+            qtdLike: 575.418,
             nomeComentario: 'gingernome_ ',
             comentario: 'Yuizinhaaaa!!!',
         }
     ]
+
 
     return (
         <div className="feed">
@@ -41,7 +42,8 @@ export default function Posts() {
                 <Post key={post.comentario} imagemPerfil={post.imagemPerfil} nomePerfil={post.nomePerfil}
                     fotoPost={post.fotoPost} imagemLike={post.imagemLike}
                     nomeLike={post.nomeLike} qtdLike={post.qtdLike}
-                    nomeComentario={post.nomeComentario} comentario={post.comentario} />
+                    nomeComentario={post.nomeComentario} comentario={post.comentario}
+                />
             )}
         </div>
     )

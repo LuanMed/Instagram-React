@@ -2,8 +2,8 @@ import { useState } from "react";
 
 export default function Usuario() {
     const imagemPadrao = "https://www.lacazmartins.com.br/wp-content/uploads/2017/05/sem-foto-oficial.png";
-    const [nome, setNome] = useState("Anônimo");
-    const [usuario, setUsuario] = useState("Anônimo");
+    const nomePadrao = "Anônimo"
+    const [nome, setNome] = useState(nomePadrao);
     const [imagem, setImagem] = useState(imagemPadrao);
     
 
@@ -17,7 +17,7 @@ export default function Usuario() {
 
     return (
         <div className="teste">
-            <User usuario={usuario} nome={nome} imagem={imagem} imagemPadrao={imagemPadrao} mudarNome={mudarNome} mudarImagem={mudarImagem}/>
+            <User nome={nome} nomePadrao={nomePadrao} imagem={imagem} imagemPadrao={imagemPadrao} mudarNome={mudarNome} mudarImagem={mudarImagem}/>
         </div>
     )
 }
@@ -27,8 +27,8 @@ function User(props) {
         <div data-test="user" className="perfil">
             <img onClick={props.mudarImagem} data-test="profile-image" src={!props.imagem ? props.imagemPadrao : props.imagem} />
             <p>
-                <span className="negrito">@{props.nome.toLowerCase()}</span> <br />
-                <span data-test="name" className="linha-fina">{props.nome}</span>
+                <span className="negrito">@{!props.nome ? props.nomePadrao.toLowerCase() : props.nome.toLowerCase()}</span> <br />
+                <span data-test="name" className="linha-fina">{!props.nome ? props.nomePadrao : props.nome}</span>
                 <ion-icon className="edit-pencil" onClick={props.mudarNome} data-test="edit-name" name="pencil-outline"></ion-icon>
             </p>
         </div>
