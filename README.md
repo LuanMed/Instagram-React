@@ -18,13 +18,3 @@
 - [React](https://reactjs.org/)
 
 </br>
-
-# 🏁 Vamos lá 
-
-Primeiro clone o repositório remoto para o seu computador e abra a pasta criada
-
-```bash
-git clone https://github.com/luanalessa/projeto2-instagram.git && cd projeto2-instagram
-```
-
-E depois, abra o arquivo index.html no seu navegador padrão.
