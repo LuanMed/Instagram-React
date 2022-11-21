@@ -5,7 +5,7 @@
 </br>
 
 ## ✏️ Descrição
-<p align="justify" >Retonamda de um projeto anterior que havia sido desenvolvido apenas em HTML e CSS. Agora acrescentando dinamismo utilizando JavaScript juntamente com React, como por exemplo: "curtir os posts" através de double click ou clicando no coração abaixo de cada post; ao curtir um post, o número de curtidas aumenta, e ao retirar a curtida, o número diminui; também é possível alterar a imagem e o nome do perfil utilizando prompt.</p>
+<p align="justify" >Retomada de um projeto anterior que havia sido desenvolvido apenas em HTML e CSS. Agora acrescentando dinamismo utilizando JavaScript juntamente com React, como por exemplo: "curtir os posts" através de double click ou clicando no coração abaixo de cada post; ao curtir um post, o número de curtidas aumenta, e ao retirar a curtida, o número diminui; também é possível alterar a imagem e o nome do perfil utilizando prompt.</p>
 
 </br>
 
@@ -14,8 +14,8 @@
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS](https://www.w3schools.com/css/)
 - [Ion-icon](https://ionic.io/ionicons)
-- [JavaScript] (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [React] (https://reactjs.org/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [React](https://reactjs.org/)
 
 </br>
 
