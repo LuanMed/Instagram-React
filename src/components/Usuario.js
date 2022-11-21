@@ -14,7 +14,6 @@ export default function Usuario() {
     function mudarImagem(){
         setImagem(prompt("Escolha o link da sua imagem"))
     }
-
     return (
         <div className="teste">
             <User nome={nome} nomePadrao={nomePadrao} imagem={imagem} imagemPadrao={imagemPadrao} mudarNome={mudarNome} mudarImagem={mudarImagem}/>
