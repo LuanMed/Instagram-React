@@ -35,7 +35,6 @@ export default function Posts() {
         }
     ]
 
-
     return (
         <div className="feed">
             {posts.map((post) =>

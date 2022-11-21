@@ -5,12 +5,7 @@ export default function Post(props) {
     const [nomeIconeCurtir, setNomeIconeCurtir] = useState("heart-outline")
     const [nomeIconeSalvar, setNomeIconeSalvar] = useState("bookmark-outline");
     const [corCoracao, setCorCoracao] = useState ("black");
-
-    // let aux = Number((props.qtdLike).replaceAll(".",""));
-    // let comprimento = aux.length;
-    // console.log(comprimento)
-
-
+    const [coracaoBranco, setCoracaoBranco] = useState ("");
     const [numeroLikes, setLikes] = useState (props.qtdLike);
 
     function curtirPost() {
@@ -26,11 +21,20 @@ export default function Post(props) {
     }
 
     function curtirFoto() {
+        function mostrarCoracao(){
+            setCoracaoBranco(<ion-icon className="coracao-branco" name="heart"></ion-icon>)
+        }
+        function esconderCoracao(){
+            setCoracaoBranco("");
+        }
+        
         if (nomeIconeCurtir == "heart-outline") {
             setNomeIconeCurtir("heart");
             setCorCoracao("red")
             setLikes(numeroLikes + 1);
-        } 
+        }
+        mostrarCoracao();
+        setTimeout(esconderCoracao, 500);
     }
 
     function salvarPost() {
@@ -40,7 +44,6 @@ export default function Post(props) {
             setNomeIconeSalvar("bookmark-outline")
         }
     }
-
 
     return (
         <div data-test="post" className="primeiro-post">
@@ -52,8 +55,9 @@ export default function Post(props) {
                     <p> ... </p>
                 </div>
             </div>
-            <div className="foto" onClick={curtirFoto}>
+            <div className="foto" onDoubleClick={curtirFoto}>
                 {props.fotoPost}
+                {coracaoBranco}
             </div>
             <div className="rodape-post">
                 <div className="rodape-post-esquerda">

@@ -206,6 +206,8 @@ body {
 
 .foto {
   width: 100%;
+  cursor:pointer;
+  position: relative;
 }
 
 .foto img {
@@ -216,6 +218,24 @@ body {
 .foto video {
   width: 100%;
   max-height: 612px;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.foto ion-icon{
+  position:absolute;
+  top: 37%;
+  left: 38%;
+  color: white;
+  font-size: 150px;
+  animation: grow 0.3s;
 }
 
 .rodape-post {
