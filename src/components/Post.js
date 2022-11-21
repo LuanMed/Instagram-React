@@ -4,9 +4,11 @@ export default function Post(props) {
 
     const [nomeIconeCurtir, setNomeIconeCurtir] = useState("heart-outline")
     const [nomeIconeSalvar, setNomeIconeSalvar] = useState("bookmark-outline");
-    const [corCoracao, setCorCoracao] = useState ("black");
-    const [coracaoBranco, setCoracaoBranco] = useState ("");
-    const [numeroLikes, setLikes] = useState (props.qtdLike);
+    const [corCoracao, setCorCoracao] = useState("black");
+    const [coracaoBranco, setCoracaoBranco] = useState("");
+    const [numeroLikes, setLikes] = useState(props.qtdLike);
+    const [iconeComentario, setIconeComentario] = useState ("heart-outline");
+    const [corComentario, setCorComentario] = useState ("black");
 
     function curtirPost() {
         if (nomeIconeCurtir == "heart-outline") {
@@ -21,13 +23,13 @@ export default function Post(props) {
     }
 
     function curtirFoto() {
-        function mostrarCoracao(){
+        function mostrarCoracao() {
             setCoracaoBranco(<ion-icon className="coracao-branco" name="heart"></ion-icon>)
         }
-        function esconderCoracao(){
+        function esconderCoracao() {
             setCoracaoBranco("");
         }
-        
+
         if (nomeIconeCurtir == "heart-outline") {
             setNomeIconeCurtir("heart");
             setCorCoracao("red")
@@ -42,6 +44,16 @@ export default function Post(props) {
             setNomeIconeSalvar("bookmark");
         } else {
             setNomeIconeSalvar("bookmark-outline")
+        }
+    }
+
+    function curtirComentario() {
+        if (iconeComentario == "heart-outline") {
+            setIconeComentario("heart");
+            setCorComentario("red")
+        } else {
+            setIconeComentario("heart-outline");
+            setCorComentario("black")
         }
     }
 
@@ -61,7 +73,7 @@ export default function Post(props) {
             </div>
             <div className="rodape-post">
                 <div className="rodape-post-esquerda">
-                    <ion-icon onClick={curtirPost} style={{color: corCoracao}} data-test="like-post" name={nomeIconeCurtir}></ion-icon>
+                    <ion-icon onClick={curtirPost} style={{ color: corCoracao }} data-test="like-post" name={nomeIconeCurtir}></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
@@ -83,7 +95,7 @@ export default function Post(props) {
                         <span className="thin">{props.comentario}</span> </p>
                 </div>
                 <div className="like-comentario">
-                    <ion-icon name="heart-outline"></ion-icon>
+                    <ion-icon onClick={curtirComentario} style={{ color: corComentario }} name={iconeComentario}></ion-icon>
                 </div>
             </div>
             <div className="comente">
